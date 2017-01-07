@@ -1,0 +1,11 @@
+{
+  "name": "heart",
+  "version": "1.0.0",
+  "description": "A life counter for Magic",
+  "author": "rozaxe",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.3.0",
+    "vue": "^2.1.8"
+  }
+}

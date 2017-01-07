@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Heart</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" type="text/css" href="bulma.min.css">
+		<link rel="stylesheet" type="text/css" href="style.min.css">
+	</head>
+	<body>
+
+		<div id="app">
+
+			<section v-bind:class="[counter > 10 ? 'is-success' : (counter <= 0 ? 'is-danger' : 'is-warning' ) ]" class="hero is-bold">
+				<div class="hero-body">
+					<div class="container has-text-centered">
+						<h1 class="title is-large">{{ counter }}</h1>
+					</div>
+					<div class="container has-text-left">
+						<div class="subtitle flip">{{ counter }}</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<p v-for="n in list" class="control has-addons has-addons-centered">
+					<a v-on:click="counter += n" class="button is-large">
+						<span class="icon">
+							+
+						</span>
+						<span>{{ n }}</span>
+					</a>
+					<a v-on:click="counter -= n" class="button is-large">
+						<span class="icon">
+							-
+						</span>
+					</a>
+				</p>
+			</section>
+
+		</div>
+
+		<script src="vue.min.js"></script>
+		<script src="app.min.js"></script>
+	</body>
+</html>
